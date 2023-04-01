@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Togglebutton</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: aqua;    
+        }
+        div{
+            display: flex;
+            flex-direction: column; 
+            align-items: center;   
+        }
+        button{
+            font-size: 30px;
+            height: fit-content;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="h1">The Most effective learning platform</h1>
+    <button id="button">CLICK HERE !!</button>
+    </div>
+    <script>
+        let x=document.getElementById("button");
+        let y=document.getElementById("h1");
+        x.addEventListener('click',function func(){
+            if(y.innerText=="The Most effective learning platform"){
+                y.innerText="Pw Skills";
+                document.body.style.backgroundColor="yellow";
+            }
+            else{
+                y.innerText="The Most effective learning platform";
+                document.body.style.backgroundColor="aqua";
+            }
+            
+        })
+
+    </script>
+</body>
+</html>
